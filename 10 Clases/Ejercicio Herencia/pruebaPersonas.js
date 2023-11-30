@@ -115,4 +115,3 @@ console.log(empleado1.toString());
 //* Creamos un objeto de la clase Cliente
 let cliente1 = new Cliente('karla', 'Vazquez', 24, new Date());
 console.log(cliente1.toString());
-
