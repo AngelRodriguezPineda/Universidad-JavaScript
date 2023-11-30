@@ -1,0 +1,33 @@
+// Operador de igualdad (==)
+console.log(5 == 5); // true
+console.log(5 == '5'); // true
+
+// Operador de desigualdad (!=)
+console.log(5 != 3); // true
+console.log(5 != '5'); // false
+
+// Operador de igualdad estricta (===)
+console.log(5 === 5); // true
+console.log(5 === '5'); // false
+
+// Operador de desigualdad estricta (!==)
+console.log(5 !== 3); // true
+console.log(5 !== '5'); // true
+
+// Operador mayor que (>)
+console.log(5 > 3); // true
+console.log(5 > 10); // false
+
+// Operador menor que (<)
+console.log(5 < 10); // true
+console.log(5 < 3); // false
+
+// Operador mayor o igual que (>=)
+console.log(5 >= 5); // true
+console.log(5 >= 10); // false
+
+// Operador menor o igual que (<=)
+console.log(5 <= 10); // true
+console.log(5 <= 3); // false
+
+
