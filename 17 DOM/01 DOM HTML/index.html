@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo DOM con JS</title>
+</head>
+<body>
+    <h1 id="encabezado">DOM con JS</h1>
+    <p id="parrafo">Buenos dias gente</p>
+    <p id="parrafo2">otro parrafo</p>
+
+
+    <script>
+    let encabezado = document.getElementById('encabezado');
+    let parrafo = document.getElementById('parrafo');
+
+    let encabezado2 = document.querySelectorAll('#encabezado');
+    let parrafo2 = document.querySelectorAll('#parrafo');
+
+    
+    console.log(encabezado.innerHTML);   
+    console.log(parrafo.innerHTML);
+    console.log(encabezado2);
+    console.log(parrafo2);  
+
+    </script>
+
+</body>
+</html>
