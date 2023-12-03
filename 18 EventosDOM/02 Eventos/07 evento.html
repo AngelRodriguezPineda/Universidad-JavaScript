@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo DOM con js</title>
+</head>
+<body>
+
+    <h1 id="titulo">DOM con JS</h1>
+    <br>
+
+    <form id="forma">
+    <label for="nombre">Nombre: </label><input type="text" id="nombre">
+    <br><br>
+    <label for="tlf">Telefono: </label><input type="tel" id="tlf">
+    </form>
+
+    <script>
+        const forma = document.getElementById('forma');    // Selecciona el formulario;
+        console.log(forma);
+        
+        forma.addEventListener('focus', (evento) => evento.target.style.backgroundColor = '#b555',true);
+        forma.addEventListener('blur', (evento)=> evento.target.style.backgroundColor = '',true);
+
+    </script>
+
+</body>
+</html>

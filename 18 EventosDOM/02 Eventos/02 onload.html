@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo DOM con js</title>
+</head>
+<body onload="entrar()">
+
+    <h1 id="titulo">DOM con JS</h1>
+    <br>
+    <div id="mostrar"></div>
+
+    <script>
+        function entrar(){
+            alert('Bienvenido');
+            let texto = '';
+            if(navigator.cookieEnabled){
+                texto = 'Cookies habilitadas';
+            } else {
+                texto = 'Cookies deshabilitadas';
+            }
+
+            document.querySelector('#mostrar').innerHTML = texto;
+
+            let legunage = navigator.language;
+            let legunages = navigator.languages;
+            console.log(legunage);
+            console.log(legunages);
+        }
+    </script>
+
+</body>
+</html>

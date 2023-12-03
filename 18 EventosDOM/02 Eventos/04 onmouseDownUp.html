@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo DOM con js</title>
+</head>
+<body>
+
+    <h1 id="titulo" onmousedown="rojo(this)" onmouseup="modoDefault(this)" onclick="verde(this)">DOM con JS</h1>
+    <br>
+    <label for="nombre">Nombre:</label> 
+    <input type="text" onchange='convertir(this)'>
+    <script>
+        function convertir(nombreInput){
+            nombreInput.value = nombre.value.toUpperCase();
+        }
+        function rojo(htmlElement){
+            console.log('onmousedown');
+            htmlElement.style.color = 'red';
+        }
+        function modoDefault(htmlElement){
+            console.log('onmouseup');
+            htmlElement.style.color = 'blue';
+        }
+        function verde(htmlElement){
+            console.log('onclick');
+            htmlElement.style.color = 'green';
+        }
+
+    </script>
+
+</body>
+</html>

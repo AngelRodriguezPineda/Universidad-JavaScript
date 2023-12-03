@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo DOM con js</title>
+</head>
+<body>
+
+    <form id="forma">
+    <h1 id="titulo">DOM con JS</h1>
+    <br>
+    <label for="nombre">Nombre: </label><input type="text" id="nombre">
+    <br><br>
+    <label for="tlf">Telefono: </label><input type="tel" id="tlf">
+    </form>
+
+    <script>
+        let nombre = document.querySelector('#nombre');
+        let tlf = document.querySelector('#tlf');
+        
+        // con funciones tipo frecha
+        nombre.addEventListener('focus', () => nombre.style.backgroundColor = '#b555' );
+        nombre.addEventListener('blur', ()=> nombre.style.backgroundColor = '' );
+
+        // con funciones tipo expresion
+        tlf.addEventListener('focus', cambiar);
+        tlf.addEventListener('blur', regresar);
+
+        // Funciones de cambian el color de fondo
+        function cambiar(){
+            this.style.backgroundColor = '#ccc';
+        }
+        function regresar(){
+            this.style.backgroundColor = '';
+        }
+    </script>
+
+</body>
+</html>
