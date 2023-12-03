@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extraer la URL</title>
+</head>
+<body>
+    
+    <h1>Extraer la URL</h1>
+
+    <p>La URL es: <span id="url"></span></p>
+
+    <h2>Extraer los datos de la URL</h2>
+    <form id="formulario">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" value="null">
+        <br>
+        <label for="familia">familia</label>
+        <input type="text" name="familia" id="familia" value="null null">
+        <br>
+        <label for="pases">Pases</label>
+        <input type="number" name="pases" id="pases" value="0">
+        <br>
+        <label for="invitados">Invitados</label>
+        <input type="text" name="invitados" id="invitados" value="null">
+        <br>
+        <label for="comentarios">Comentarios</label>
+        <textarea name="comentarios" id="comentarios" cols="30" rows="10">null</textarea>
+        <br>
+    </form>
+
+    <script>
+        //URL ?nombre=Angel&familia=Pineda&pases=5&invitados={Lupita,Manuel,Luis,Juan}&comentarios=Hola+NOMBRE+DEL+PERSONA+gracias+por+venir+a+la+fiesta+con+FAMILIA+y+sus+INVITADOS
+
+        const mostrarURL = document.querySelector('#url').innerHTML = window.location.search;
+        
+        //Extraer los parametros de la URL
+        const URL = window.location.search;
+        console.log(URL);
+
+        //Creamos una instancia de la clase URLSearchParams
+        const parametrosURL = new URLSearchParams(URL);
+        console.log(parametrosURL);
+
+        //recorrido de todos los parametros de la URL
+        // for(let valoresURL of URL){
+        //     console.log(valoresURL);
+        // }
+
+        //Para obtener un valor especifico de la URL se utiliza el metodo get() de la clase URLSearchParams y se le pasa como parametro el nombre del parametro que se quiere obtener su valor.
+
+        const nombre = parametrosURL.get('nombre');
+        const familia = parametrosURL.get('familia');
+        const pases = parametrosURL.get('pases');
+        const invitados = parametrosURL.get('invitados');
+        const comentarios = parametrosURL.get('comentarios');
+
+        console.log(nombre);
+        console.log(familia);
+        console.log(pases);
+        console.log(invitados);
+        console.log(comentarios);
+
+        let invitadosArray = invitados.split(',');
+        console.log(invitadosArray);
+
+        // Rellenar el formulario con los valores obtenidos de la URL
+        document.getElementById('nombre').value = nombre;
+        document.getElementById('familia').value = familia;
+        document.getElementById('pases').value = pases;
+        document.getElementById('invitados').value = invitadosArray;
+        document.getElementById('comentarios').value = comentarios;
+    </script>
+</body>
+</html>
+
+        
+
+    </script>
+</body>
+</html>
